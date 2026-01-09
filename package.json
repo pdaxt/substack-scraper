@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/pdaxt/substack-scraper#readme",
   "dependencies": {
-    "ws": "^8.14.0"
+    "ws": "^8.19.0"
   },
   "engines": {
     "node": ">=18.0.0"
