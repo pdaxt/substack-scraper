@@ -148,6 +148,14 @@ class SubstackScraper {
                         if (cells.length >= 4) {
                             const email = cells[1]?.innerText?.trim() || '';
                             const tier = cells[2]?.innerText?.trim()?.toLowerCase() || '';
+
+                            // Get activity rating from title attribute (e.g., "3 out of 5")
+                            const activityDiv = cells[3]?.querySelector('[title]');
+                            const activityTitle = activityDiv?.getAttribute('title') || 'No activity';
+                            let activity = 0;
+                            const activityMatch = activityTitle.match(/(\\d+) out of 5/);
+                            if (activityMatch) activity = parseInt(activityMatch[1]);
+
                             const date = cells[4]?.innerText?.trim() || '';
                             const amount = cells[5]?.innerText?.trim() || '$0.00';
 
@@ -156,6 +164,7 @@ class SubstackScraper {
                                     email,
                                     tier: tier.includes('found') ? 'founding' :
                                           tier.includes('paid') ? 'paid' : 'free',
+                                    activity,
                                     subscribeDate: date,
                                     amountSpent: amount
                                 });
@@ -296,9 +305,9 @@ async function main() {
 
         // Save CSV
         const csvPath = path.join(CONFIG.OUTPUT_DIR, `subscribers-${date}.csv`);
-        const csvHeader = 'Email,Tier,Subscribe Date,Amount Spent\n';
+        const csvHeader = 'Email,Tier,Activity,Subscribe Date,Amount Spent\n';
         const csvRows = subscribers.map(s =>
-            `"${s.email}","${s.tier}","${s.subscribeDate}","${s.amountSpent}"`
+            `"${s.email}","${s.tier}","${s.activity}","${s.subscribeDate}","${s.amountSpent}"`
         ).join('\n');
         fs.writeFileSync(csvPath, csvHeader + csvRows);
         console.log(`Saved: ${csvPath}`);

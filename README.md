@@ -84,32 +84,54 @@ This generates insights like:
 OVERVIEW
 ─────────────────────────────────────
 Total Subscribers:    854
-  • Free:             847 (99.2%)
+  • Free:             848 (99.3%)
   • Paid:             3 (0.4%)
-  • Founding:         4 (0.5%)
+  • Founding:         3 (0.4%)
 
-Conversion Rate:      0.82%
-Total Revenue:        $1492.79
-Revenue per Sub:      $1.75
+Conversion Rate:      0.70%
+Total Revenue:        $1411.79
+Revenue per Sub:      $1.65
 
-BENCHMARK
+═══════════════════════════════════════════════════════════════
+                    ENGAGEMENT ANALYSIS
+═══════════════════════════════════════════════════════════════
+
+ENGAGEMENT BREAKDOWN
 ─────────────────────────────────────
-Conversion Rate      0.82 → Poor
-Founding %           0.47 → Average
-Revenue/Sub          1.75 → Great
+Activity 5/5 (Superfans):      162 ████████████████
+Activity 4/5 (Very Engaged):   155 ████████████████
+Activity 1/5 (Minimal):        188 ███████████████████
+Activity 0/5 (None):           349 ███████████████████████████████████
 
-GROWTH BY MONTH
-─────────────────────────────────────
-Mar 2025    252 █████████████████████████
-Apr 2025     82 ████████
-May 2025    135 ██████████████
-...
+Highly Engaged (4-5):   317 (37.1% of list)
 
-KEY INSIGHTS
+🎯 PRIME CONVERSION TARGETS
 ─────────────────────────────────────
-1. 71% of paying subscribers joined at launch
-2. 31 free subscribers from 60-90 days ago are conversion targets
-3. Best growth month: Mar 2025 with 252 subscribers
+Engaged FREE subscribers (4-5/5): 313
+  • Activity 5/5: 159 superfans who haven't converted
+  • Activity 4/5: 154 very engaged non-payers
+
+═══════════════════════════════════════════════════════════════
+                    CONVERSION OPPORTUNITIES
+═══════════════════════════════════════════════════════════════
+
+TIER 1: HOT LEADS (Engaged + 30-90 days old)
+Count: 32
+These subscribers are engaged AND have been around long enough.
+
+TIER 2: WARM LEADS (Engaged + <30 days old)
+Count: 64
+Highly engaged but still new. Nurture them.
+
+TIER 3: LOYAL BUT FREE (Engaged + 90+ days)
+Count: 217
+Consider: Special offer, founding member push, or direct outreach.
+
+═══════════════════════════════════════════════════════════════
+FILES SAVED:
+  • exports/engaged-subscribers-2026-01-09.csv (313 engaged free subs)
+  • exports/hot-leads-2026-01-09.csv (32 hot leads)
+═══════════════════════════════════════════════════════════════
 ```
 
 ## Configuration Options
