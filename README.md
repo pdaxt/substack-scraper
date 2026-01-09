@@ -6,9 +6,10 @@ Export your entire Substack subscriber list to CSV/JSON. Works with any list siz
 
 ## What You Get
 
-- **CSV file** with: Email, Tier (free/paid/founding), Subscribe Date, Amount Spent
+- **CSV file** with: Email, Tier (free/paid/founding), Activity (engagement 0-5), Subscribe Date, Amount Spent
 - **JSON file** with full data + stats (open rate, click rate, etc.)
-- Works with **any subscriber count** (handles infinite scroll automatically)
+- **Engagement analysis** that identifies your most engaged subscribers
+- Works with **any subscriber count** (tested with 6,500+ subscribers, handles infinite scroll automatically)
 
 ## Quick Start
 
@@ -148,11 +149,13 @@ Or edit `scraper.js` directly and change the `CONFIG` object.
 
 ### CSV
 ```csv
-Email,Tier,Subscribe Date,Amount Spent
-"reader@email.com","free","9 Jan 2025","US$0.00"
-"supporter@email.com","paid","5 Jan 2025","US$50.00"
-"superfan@email.com","founding","1 Jan 2025","US$200.00"
+Email,Tier,Activity,Subscribe Date,Amount Spent
+"reader@email.com","free","3","9 Jan 2025","US$0.00"
+"supporter@email.com","paid","5","5 Jan 2025","US$50.00"
+"superfan@email.com","founding","5","1 Jan 2025","US$200.00"
 ```
+
+Activity is the engagement rating (0-5) from Substack's subscriber dashboard.
 
 ### JSON
 ```json
