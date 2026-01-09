@@ -1,0 +1,36 @@
+{
+  "name": "substack-scraper",
+  "version": "1.0.0",
+  "description": "Export your Substack subscriber list to CSV/JSON",
+  "main": "scraper.js",
+  "bin": {
+    "substack-scraper": "./scraper.js"
+  },
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "keywords": [
+    "substack",
+    "scraper",
+    "subscribers",
+    "export",
+    "csv",
+    "newsletter"
+  ],
+  "author": "Pran <19pran@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdaxt/substack-scraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pdaxt/substack-scraper/issues"
+  },
+  "homepage": "https://github.com/pdaxt/substack-scraper#readme",
+  "dependencies": {
+    "ws": "^8.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
