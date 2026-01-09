@@ -62,6 +62,56 @@ Your exports will be in the `./exports` folder:
 - `subscribers-YYYY-MM-DD.csv`
 - `subscribers-YYYY-MM-DD.json`
 
+### 6. Analyze Your Data
+
+```bash
+node analyze.js
+```
+
+This generates insights like:
+- Conversion rate vs industry benchmarks
+- Growth by month (visual chart)
+- When your paying subscribers joined
+- Conversion opportunities (engaged free subs)
+
+## Sample Analysis Output
+
+```
+═══════════════════════════════════════════════════════════════
+                    SUBSCRIBER ANALYSIS
+═══════════════════════════════════════════════════════════════
+
+OVERVIEW
+─────────────────────────────────────
+Total Subscribers:    854
+  • Free:             847 (99.2%)
+  • Paid:             3 (0.4%)
+  • Founding:         4 (0.5%)
+
+Conversion Rate:      0.82%
+Total Revenue:        $1492.79
+Revenue per Sub:      $1.75
+
+BENCHMARK
+─────────────────────────────────────
+Conversion Rate      0.82 → Poor
+Founding %           0.47 → Average
+Revenue/Sub          1.75 → Great
+
+GROWTH BY MONTH
+─────────────────────────────────────
+Mar 2025    252 █████████████████████████
+Apr 2025     82 ████████
+May 2025    135 ██████████████
+...
+
+KEY INSIGHTS
+─────────────────────────────────────
+1. 71% of paying subscribers joined at launch
+2. 31 free subscribers from 60-90 days ago are conversion targets
+3. Best growth month: Mar 2025 with 252 subscribers
+```
+
 ## Configuration Options
 
 | Environment Variable | Default | Description |
